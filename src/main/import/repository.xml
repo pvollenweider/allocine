@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<content xmlns:j="http://www.jahia.org/jahia/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0">
+    <modules jcr:primaryType="jnt:modules">
+        <allocine j:dependencies="bootstrap3-components default"
+                j:installedModules="allocine"
+                j:modulePriority="0"
+                j:moduleType="templatesSet"
+                j:title="allocine"
+                jcr:mixinTypes="jmix:hasExternalProviderExtension"
+                jcr:primaryType="jnt:module">
+
+            <portlets jcr:primaryType="jnt:portletFolder"/>
+            <files jcr:primaryType="jnt:folder"/>
+            <contents jcr:primaryType="jnt:contentFolder"/>
+            <templates jcr:primaryType="jnt:templatesFolder">
+                <files jcr:primaryType="jnt:folder">
+                    <themes jcr:primaryType="jnt:folder">
+                            <default jcr:primaryType="jnt:folder"/>
+                    </themes>
+                </files>
+                <contents jcr:primaryType="jnt:contentFolder"/>
+                    <base j:theme="/modules/allocine/templates/files/themes/default"
+                  j:view="allocine"
+                  jcr:mixinTypes="jmix:theme"
+                  jcr:primaryType="jnt:template">
+                        <home jcr:primaryType="jnt:pageTemplate">
+                            <content jcr:primaryType="jnt:contentList">
+                                <main activeContainer="false"
+                           columnsType="predefinedColumns"
+                           grid="3_6_3"
+                           gridLayout="fixed-width"
+                           jcr:mixinTypes="bootstrap3mix:advancedColumnProperties bootstrap3mix:predefinedColumns"
+                           jcr:primaryType="bootstrap3nt:columns"
+                           sectionElement="no-section"/>
+                            </content>
+                        </home>
+                        <simple jcr:primaryType="jnt:pageTemplate">
+                            <content jcr:primaryType="jnt:contentList">
+                                <breadcrumb j:view="pull-left"
+                                 jcr:mixinTypes="jmix:renderable"
+                                 jcr:primaryType="bootstrap3nt:breadcrumb"/>
+                                <page-title jcr:primaryType="bootstrap3nt:pageTitle"/>
+                                <main activeContainer="false"
+                           columnsType="predefinedColumns"
+                           grid="8_4"
+                           gridLayout="fixed-width"
+                           jcr:mixinTypes="bootstrap3mix:advancedColumnProperties bootstrap3mix:predefinedColumns"
+                           jcr:primaryType="bootstrap3nt:columns"
+                           sectionElement="no-section"/>
+                            </content>
+                        </simple>
+                        <pagecontent jcr:primaryType="jnt:contentList">
+                            <navigation-menu j:invalidLanguages="de es fr it pt"
+                                   jcr:primaryType="bootstrap3nt:navbar"/>
+                            <content activeContainer="true"
+                             columnsType="predefinedColumns"
+                             grid="0"
+                             gridLayout="fixed-width"
+                             jcr:mixinTypes="bootstrap3mix:advancedColumnProperties bootstrap3mix:predefinedColumns"
+                             jcr:primaryType="bootstrap3nt:columns"
+                             sectionElement="section">
+                                <content-1 jcr:primaryType="jnt:contentList">
+                                    <breadcrumb j:invalidLanguages="de es fr it pt"
+                                    j:view="pull-left"
+                                    jcr:mixinTypes="jmix:renderable"
+                                    jcr:primaryType="bootstrap3nt:breadcrumb"/>
+                                    <page-title j:invalidLanguages="de es fr it pt"
+                                    jcr:primaryType="bootstrap3nt:pageTitle"/>
+                                    <content jcr:primaryType="jnt:area"/>
+                            </content-1>
+                            </content>
+                            <footer activeContainer="true"
+                          columnsType="predefinedColumns"
+                          grid="12"
+                          gridLayout="fixed-width"
+                          jcr:mixinTypes="bootstrap3mix:advancedColumnProperties bootstrap3mix:createAbsoluteAreas bootstrap3mix:predefinedColumns"
+                          jcr:primaryType="bootstrap3nt:columns"
+                          level="0"
+                          sectionElement="footer"/>
+                        </pagecontent>
+                </base>
+                    <content-template j:applyOn="jnt:content"
+                              j:hiddenTemplate="true"
+                              j:priority="1"
+                              j:view="allocine"
+                              jcr:primaryType="jnt:contentTemplate">
+                    <pagecontent jcr:primaryType="jnt:contentList">
+                            <main-resource-display j:mainResourceView="default" jcr:primaryType="jnt:mainResourceDisplay"/>
+                    </pagecontent>
+                </content-template>
+            </templates>
+                
+                <home j:isHomePage="true"
+               j:templateName="home"
+               jcr:primaryType="jnt:page">
+                    <j:translation_en jcr:language="en"
+                              jcr:mixinTypes="mix:title"
+                              jcr:primaryType="jnt:translation"
+                              jcr:title="Home"/>
+                </home>
+        </allocine>
+    </modules>
+</content>
